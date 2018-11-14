@@ -1,8 +1,8 @@
-# ×Ô¶¨Òåuiautomatorviewer xpath¹¦ÄÜ
-* ÔÚÊ¹ÓÃ×Ô¶¯»¯²âÊÔÖĞĞèÒª¶¨Î»ÔªËØ.Ò»°ã¶¼ÊÇÊ¹ÓÃsdkÏÂÃæµÄuiautomatorviewer,¶ø´Ë¹¤¾ßÖ»ÄÜ¶¨Î»id,class,nameµÈ£¬µ«ÊÇÃ»ÓĞxpath
-* [³¬¼¶Á´½Ó](https://android.googlesource.com/platform/frameworks/uiautomator/+/android-sdk-4.4.2_r1.0.1) - `Ô´ÂëÏÂÔØuiautomatorviewer`
-* ĞèÒªÒÀÀµµÄÎÄ¼ş
-	* ¶ÔÓ¦µÄandroid.jar
+# è‡ªå®šä¹‰uiautomatorviewer xpathåŠŸèƒ½
+* åœ¨ä½¿ç”¨è‡ªåŠ¨åŒ–æµ‹è¯•ä¸­éœ€è¦å®šä½å…ƒç´ .ä¸€èˆ¬éƒ½æ˜¯ä½¿ç”¨sdkä¸‹é¢çš„uiautomatorviewer,è€Œæ­¤å·¥å…·åªèƒ½å®šä½id,class,nameç­‰ï¼Œä½†æ˜¯æ²¡æœ‰xpath
+* [è¶…çº§é“¾æ¥](https://android.googlesource.com/platform/frameworks/uiautomator/+/android-sdk-4.4.2_r1.0.1) - `æºç ä¸‹è½½uiautomatorviewer`
+* éœ€è¦ä¾èµ–çš„æ–‡ä»¶
+	* å¯¹åº”çš„android.jar
 	* com.google.guava_XXX.jar
 	* common.jar
 	* ddmlib.jar
@@ -11,22 +11,22 @@
 	* org.eclipse.jface_XXX.jar
 	* org.eclipse.swt.XXX.jar
 	
-* org.eclipse.jdt.core.prefs ÕâÀïµÄÉèÖÃÎÄ¼şÒª×¢ÒâÏÂ£¬ÓĞÊ±ºò»á±¨´íjavaµÄ±àÒë°æ±¾´íÎó£¬´Ë¿Ó¿ÓµÃÎÒÌ«Éî
+* org.eclipse.jdt.core.prefs è¿™é‡Œçš„è®¾ç½®æ–‡ä»¶è¦æ³¨æ„ä¸‹ï¼Œæœ‰æ—¶å€™ä¼šæŠ¥é”™javaçš„ç¼–è¯‘ç‰ˆæœ¬é”™è¯¯ï¼Œæ­¤å‘å‘å¾—æˆ‘å¤ªæ·±
 
-* com.android.uiautomator:´æ·Åuiautomatorviewer¹¤¾ßµÄGUI½çÃæ´úÂë£¬ÆäÖĞÖ÷Èë¿ÚUiAutomatorViewer.javaÎÄ¼şÀïÃæÓĞmainº¯ÊıÈë¿Ú£¬¹¤¾ßµÄ´°¿Ú¾ÍÔÚ´Ë´´½¨¡£
-* com.android.uiautomator.actions£º´æ·ÅËùÓĞanction²Ù×÷£¬Èç£ºDevice screenshot ¡¢openµÈ¡£
-* com.android.uiautomator.tree£º´æ·Åtree·â×°£¬dump³öÀ´µÄxml½âÎö³ÉÒ»¿ÃÍêÕûµÄtree£¬Õâ¸ö°üÊÇºËĞÄ°ü¡£
+* com.android.uiautomator:å­˜æ”¾uiautomatorviewerå·¥å…·çš„GUIç•Œé¢ä»£ç ï¼Œå…¶ä¸­ä¸»å…¥å£UiAutomatorViewer.javaæ–‡ä»¶é‡Œé¢æœ‰mainå‡½æ•°å…¥å£ï¼Œå·¥å…·çš„çª—å£å°±åœ¨æ­¤åˆ›å»ºã€‚
+* com.android.uiautomator.actionsï¼šå­˜æ”¾æ‰€æœ‰anctionæ“ä½œï¼Œå¦‚ï¼šDevice screenshot ã€openç­‰ã€‚
+* com.android.uiautomator.treeï¼šå­˜æ”¾treeå°è£…ï¼Œdumpå‡ºæ¥çš„xmlè§£ææˆä¸€æ£µå®Œæ•´çš„treeï¼Œè¿™ä¸ªåŒ…æ˜¯æ ¸å¿ƒåŒ…ã€‚
 
-## ´úÂëĞŞ¸Ä²¿·Ö
+## ä»£ç ä¿®æ”¹éƒ¨åˆ†
 ### com.android.uiautomator.tree
 #### UiNode.class
 ```
-// ÎÒµÄĞÂÔö
+// æˆ‘çš„æ–°å¢
     private String getNodeClassAttribute() {
   		return this.mAttributes.get("class");
   	}
 	
-	  //ÎÒµÄĞÂÔö
+	  //æˆ‘çš„æ–°å¢
     public String getXpath()
     {
         String className=getNodeClassAttribute();
@@ -48,10 +48,10 @@
 
 #### UiHierarchyXmlLoader.calss
 ```
-//ÎÒµÄĞÂÔö
+//æˆ‘çš„æ–°å¢
     private UiNode mTmpNode ;
 	public BasicTreeNode parseXml(String xmlPath) {
-                    //ÎÒµÄĞŞ¸Ä
+                    //æˆ‘çš„ä¿®æ”¹
                     if (mParentNode != null) {
                         mParentNode.addChild(mWorkingNode);
                         //System.out.println(mNodeList.size());
@@ -68,3 +68,8 @@
 
 
 ![pic.png](pic.png "pic.png")
+
+2018/11/14
+æ›´æ–°libåŒ…...
+
+
