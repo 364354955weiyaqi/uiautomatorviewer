@@ -73,4 +73,6 @@
 更新lib包...
 添加编译成功的jar包
 
+参考并感谢Louis-me：https://github.com/Louis-me/xpath_uiautomatorviewer
+
 
