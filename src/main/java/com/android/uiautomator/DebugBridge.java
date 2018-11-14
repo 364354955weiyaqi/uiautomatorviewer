@@ -32,7 +32,8 @@ public class DebugBridge {
         if (toolsDir == null) {
 //            return null;
 //            toolsDir ="D:\\app\\adt-bundle-windows-x86_64-20140702\\sdk\\tools";
-        	toolsDir ="D:\\android_sdk\\tools";
+//        	toolsDir ="D:\\android_sdk\\tools";
+        	toolsDir = System.getenv().get("ANDROID_HOME")+"\\tools";
         }
 
         File sdk = new File(toolsDir).getParentFile();
